@@ -1,0 +1,48 @@
+vk3t1
+Tässä tehtävässä käytetään viinitietokantaa. Luonti- ja lisäyslauseet, kannan tila
+
+Alla on kytkettyä alikyselyä hyödyntävä kysely. 
+Tee alla annettu kysely ei-sisäkkäisenä kyselynä (siis kyselynä, jossa ei ole alikyselyä), jossa hyödynnetään luonnollista liitosta.
+
+SELECT viini.nimi,
+(SELECT viinitila.nimi
+FROM viinitila
+WHERE viini.vttunnus = viinitila.vttunnus) AS tila
+FROM viini
+ORDER BY viini.nimi;
+
+
+vk3t2
+
+Tee melkein_universaali_relaatio-niminen näkymä,
+joka kokoaa kaikkien viinitilojen nimet ja viinitilojen valmistamien viinien
+ja niiden sisältämien rypälelajikkeiden nimet ja lajittelee tulosrivit nousevaan järjestykseen viinitilan, viinin ja rypälelajikkeen nimen perusteella.
+
+Ota näkymään  mukaan myös sellaiset rypälelajikkeet, joita mikään viini ei sisällä
+
+
+vk3t3
+
+Tee ei-rekursiivinen kysely, joka hakee kaikki elokuvan id – elokuvan edeltäjän id -parit.
+Jokaiselle elokuvalle haetaan sekä mahdollinen välittömästi edeltävä elokuva että mahdolliset välillisesti edeltävät elokuvat.
+Taso-sarakkeessa oleva arvo kertoo edeltäjän ja elokuvan välisen ”etäisyyden” edeltäjä-elokuva -hierarkiassa eli kuinka monta tasoa ylempää edeltäjä löytyy hierarkiasta.
+Esim. välittömällä edeltäjällä tasona on arvo 1.
+
+Lajittele tulostaulun rivit nousevaan järjestykseen elokuvan id:n ja taso-sarakkeen perusteella.
+
+
+vk3t4
+
+Tee rekursiivinen kysely, joka hakee kaikki elokuvan id – elokuvan edeltäjän id -parit.
+Jokaiselle elokuvalle haetaan sekä mahdollinen välittömästi edeltävä elokuva että mahdolliset välillisesti edeltävät elokuvat.
+Lajittele tulostaulun rivit nousevaan järjestykseen elokuvan id:n ja taso-sarakkeen perusteella.
+
+
+vk3t5
+
+Tee kysely, joka hakee työntekijöiden nimet (etunimet ja sukunimet välilyönnillä toisistaan erotettuina samassa tulostaulun sarakkeessa) ja palkat.
+Osastolla 4 työskentelevien palkat näytetään uusipalkka-nimisessä sarakkeessa 20 prosentilla korotettuina, muiden palkat säilytetään ennallaan.
+Huolehdi, että kaikki uusipalkka-sarakkeen arvot on esitetty kahden desimaalin tarkkuudella.
+
+Järjestä tulostaulun rivit toisen ja ensimmäisen sarakkeen perusteella nousevaan järjestykseen. Käytä sarakkeen järjestysnumeroa, numerointi lähtee ykkösestä.
+
