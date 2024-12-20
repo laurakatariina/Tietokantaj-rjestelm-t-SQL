@@ -1,0 +1,16 @@
+Tehtävä 2.
+Tee PL/PgSQL funktio, joka laskee annetulle oppilaalle (argumentti) painotetun keskiarvon 
+käymistään kursseista. Tee tehtävää varten kaavio (yk), johon tietokanta tallennetaan. Kaavio 
+sisältää seuraavat taulut: kurssi(kurssi_nro, nimi, laajuus) ja 
+suoritus(kurssi_nro, op_nro, arvosana). Painotettu keskiarvoa lasketetaan: 
+(P1 * A1 + P2* A2 +…+ Pn * An) /(P1 + P2 +…+ Pn), missä Pi on kurssin opintopistemäärä ja Ai sitä 
+vastaava arvosana. Toisin sanoen otetaan summa kustakin opintopistemäärästä kerrottuna sitä 
+vastaavalla arvosanalla, ja jaetaan tämä summa opintopisteiden kokonaismäärällä.
+
+Tehtävä 3.
+Tee triggeri, joka herätetään jokaisen TILIT-relaatioon kohdistuvan muutoksen jälkeen. Triggerin 
+tulee tallentaa tilinumero, johon muutos kohdistuu sekä muutosajankohta (voit käyttää 
+ajankohtaa, joka saadaan, kun triggeriä suoritetaan). Määrittele tehtävää varten 
+KIRJAUS(TILI,PAIVA,KLO) relaatio. Päivän ja ajan saamiseksi voit käyttää esim. current_date
+ja current_time funktioita. Vaihtoehtoisesti voit käyttää aikaleimaa, jolloin vastaava relaatio on 
+luonnollisesti KIRJAUS(TILI,AIKA).
